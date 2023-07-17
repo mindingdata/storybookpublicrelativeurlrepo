@@ -1,14 +1,21 @@
 module.exports = {
-  "stories": ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  "addons": ["@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-interactions", "@storybook/addon-mdx-gfm"],
-  "framework": {
+  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+    "@storybook/addon-mdx-gfm",
+  ],
+  framework: {
     name: "@storybook/react-vite",
-    options: {}
+    options: {},
   },
-  "features": {
-    "storyStoreV7": true
+  features: {
+    storyStoreV7: true,
   },
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
+  // https://storybook.js.org/docs/react/api/main-config-static-dirs#page-top
+  staticDirs: ["../public"],
 };
